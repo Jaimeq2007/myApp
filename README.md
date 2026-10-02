@@ -1,6 +1,6 @@
 # Hito 1 · Ficha del negocio
 
-**Pareja:** [COMPLETAR: Nombre Apellido] · [COMPLETAR: Nombre Apellido]
+**Pareja:** [Jaime Joustin Quijije Suárez] · [Bryan Josue Chiquito Delgado]
 **Paralelo:** [4to "B"]
 **Negocio en una línea:** Aplicación web donde los dueños de mascotas hacen match para organizar citas de juego entre sus mascotas, y además donde personas y refugios publican mascotas en adopción para que otros las adopten.
 
@@ -53,7 +53,7 @@ United Dogs (registrada como United Pets en Dealroom) fue una red social para du
 | nombre | texto | sí | María |
 | apellido | texto | sí | Cedeño |
 | correo | texto | sí | maria@correo.com |
-| contrasena_hash | texto | sí | $2b$12$K9x… |
+| contraseña | texto | sí | $2b$12$K9x… |
 | telefono | texto | no | 0991234567 |
 | sector | texto | no | Barrio Umiña |
 | tipo_cuenta | uno de: persona, refugio | sí | persona |
@@ -67,7 +67,7 @@ United Dogs (registrada como United Pets en Dealroom) fue una red social para du
 |----------|------|-------------|---------|
 | id | número entero | sí | 900 |
 | usuario | referencia a otra entidad (Usuario) | sí | María Cedeño |
-| token_hash | texto | sí | a3f9…c21 |
+| token | texto | sí | a3f9…c21 |
 | ip | texto | no | 190.15.20.4 |
 | dispositivo | texto | no | Chrome en Android |
 | creado_en | fecha y hora | sí | 2026-10-02 14:30 |
@@ -388,7 +388,7 @@ classDiagram
         +String nombre
         +String apellido
         +String correo
-        +String contrasena_hash
+        +String contraseña
         +String telefono
         +String sector
         +String tipo_cuenta
@@ -399,7 +399,7 @@ classDiagram
 
     class Sesion {
         +int id
-        +String token_hash
+        +String token
         +String ip
         +String dispositivo
         +DateTime creado_en
@@ -790,4 +790,6 @@ Un usuario no puede solicitar la adopción de sus propias publicaciones.
 
 ## 8. Declaración de IA
 
-Usamos Claude (Anthropic) como apoyo para redactar el borrador de las secciones 3 a 7; el equipo revisó y ajustó el contenido. [COMPLETAR: indicar si usaron IA en las secciones 1 y 2 y en las vistas maquetadas.]
+Usamos Claude (Anthropic) como apoyo en el Hito 1:
+- **Secciones  2:** búsqueda del caso (United Dogs). Nosotros revisamos las fuentes y las cifras.
+- **Sección 3:** borrador de las restricciones. Nosotros las revisamos y las adaptamos.
